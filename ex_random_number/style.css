@@ -1,0 +1,106 @@
+.screen {
+  position: relative;
+}
+
+h1 {
+  font-size: 22px;
+  padding-top: 30px;
+  font-family: arial;
+}
+
+#html_tal {
+  color: rebeccapurple;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 50px;
+}
+
+.tal_boks {
+  border-style: solid;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  display: grid;
+  place-items: center; /* både lodret og vandret */
+  padding-bottom: 30px;
+}
+
+.p {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  place-items: center; /* både lodret og vandret */
+}
+
+.form {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+#button {
+  cursor: pointer;
+  border: solid;
+  border-width: 1px;
+  background-color: rgb(127, 181, 205);
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.skjul {
+  display: none;
+}
+
+.looser,
+.winner {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 21%;
+}
+
+.looser,
+.winner,
+#game_over_tekst,
+#level_complete_tekst,
+#feedback {
+  animation-name: fade_in_kf;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}
+
+.game_over_looser {
+  font-size: 50;
+}
+
+@keyframes fade_in_kf {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+#game_over_tekst,
+#level_complete_tekst,
+#feedback {
+  font-size: 30px;
+  font-family: arial;
+  position: absolute;
+  left: 42%;
+  z-index: 2;
+  top: 10%;
+  cursor: pointer;
+}

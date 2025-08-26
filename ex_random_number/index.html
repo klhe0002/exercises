@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+        <div class="screen">
+            <h1 class="center">Gæt på et tal mellem 0 og 100</h1>
+
+            <div class="center">
+                <form class="form">
+                    <!-- <label for="gætte_tal">Gæt på et tal mellem 0 og 100</label><br> -->
+                    <input type="number" id="gætte_tal" name="gætte_tal"><br>
+                </form>
+            </div>
+
+            <div class="center">
+                <button id="button">Start</button>
+            </div>
+
+            <div class="center">
+                <p class="p">Her er tallet:</p>
+            </div>
+
+            <div class="center">
+                <div class="tal_boks">
+                    <div id="html_tal"></div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="game_over">
+            <div id="game_over_tekst">
+                <p id="game_over_loser"></p>
+
+            </div>
+            <div class="looser">
+                <img src="Billeder/sad-svgrepo-com.svg" alt="">
+            </div>
+
+
+        </div>
+
+        <div id="level_complete">
+            <div id="level_complete_tekst">
+                <p id="level_complete_winner"></p>
+            </div>
+            <div class="winner">
+                <img src="Billeder/happy-svgrepo-com (1).svg" alt="">
+            </div>
+        </div>
+
+        <div id="feedback"></div>
+    </main>
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
