@@ -69,6 +69,22 @@ function animationEnd() {
   player2.classList.remove("shake");
   player2.classList.add(computerChoice);
 
+  // if (userGuess === "rock") { //en anden måde at gøre det på
+  //   player1.classList.add("rock");
+  // } else if (userGuess === "papr") {
+  //   player1.classList.add("paper");
+  // } else if (userGuess === "scissors") {
+  //   player1.classList.add("scissors");
+  // }
+
+  // if (userGuess === "rock") {
+  //   computerChoice.classList.add("rock");
+  // } else if (userGuess === "papr") {
+  //   computerChoice.classList.add("paper");
+  // } else if (userGuess === "scissors") {
+  //   computerChoice.classList.add("scissors");
+  // }
+
   player1.addEventListener("animationend", showResult);
   player2.addEventListener("animationend", showResult);
 }
