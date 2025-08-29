@@ -24,33 +24,24 @@ Her er et link til hvordan opgaven kunne se ud ustylet, jeres skal være stylet 
 
 Ekstra: Når tallet er gættet skal computeren skrive til siden hvor mange gæt den har brugt. */
 
-// function computerGuess() {
-//   makeGuess();
-//   //   computerChoice = mid;
-//   //   console.log(mid);
-
-//   //   document.querySelector("#h1").textContent = mid;
-
-//   //   addEventListenersToResultButtons();
-// }
 const tooHightBtn = document.querySelector("#too_high");
 const tooLowBtn = document.querySelector("#too_low");
 const correctBtn = document.querySelector("#correct");
 const startBtn = document.querySelector("#start");
 
-let computerChoice;
-let userChoice;
+tooHightBtn.disabled = true; //bruger disabled for at gøre knapperne inarktive
+tooLowBtn.disabled = true;
+correctBtn.disabled = true;
+
+tooHightBtn.classList.add("pointer"); //fjerner pointeren når de er inaktive
+tooLowBtn.classList.add("pointer");
+correctBtn.classList.add("pointer");
 
 let min = 0;
 let max = 100;
-let mid = Math.floor((min + max) / 2);
 let guess;
-startGame();
 
-function startGame() {
-  startBtn.addEventListener("click", makeGuess); //gør dem klikbare
-}
-
+startBtn.addEventListener("click", makeGuess); //gør dem klikbare
 tooHightBtn.addEventListener("click", tooHigh); //gør dem klikbare
 tooLowBtn.addEventListener("click", tooLow);
 correctBtn.addEventListener("click", correct);
@@ -69,12 +60,28 @@ function makeGuess() {
   guess = Math.floor((min + max) / 2);
   console.log("guess", guess);
   document.querySelector("#h1").textContent = guess;
+
+  tooHightBtn.disabled = false;
+  tooLowBtn.disabled = false;
+  correctBtn.disabled = false;
+  startBtn.disabled = true;
+
+  tooHightBtn.classList.remove("pointer");
+  tooLowBtn.classList.remove("pointer");
+  correctBtn.classList.remove("pointer");
+
+  startBtn.classList.add("pointer");
 }
 
 function correct() {
   document.querySelector("#h1").textContent = "Yay, you guessed it!";
+
+  tooHightBtn.disabled = true;
+  tooLowBtn.disabled = true;
+
+  tooHightBtn.classList.add("pointer");
+  tooLowBtn.classList.add("pointer");
+  correctBtn.classList.add("pointer");
+
+  correctBtn.classList.remove("pointer");
 }
-
-function result() {}
-
-function reset() {}
