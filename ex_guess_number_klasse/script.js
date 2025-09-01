@@ -9,6 +9,12 @@ let brugerGuess;
 
 btn.addEventListener("mousedown", click_btn);
 
+// function getRandomNum (max) {
+//   return Math.floor (Math.random() * max);
+// }
+
+// const computerNum = getRandomNum(100)
+
 function click_btn() {
   brugerGuess = pareseInt(input.value); // fordi man skriver === pareseInt for at konvertere til et tal, så den ikke sammenlignder værdi
 
