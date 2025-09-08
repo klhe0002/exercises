@@ -43,15 +43,36 @@ console.log(result);
 (a) => a + 100; //hvis der kun er et parameter behøver man ikke parenteser
 
 //hente JSON data fra en URL (anbefale at bruge )
-export async function loadJSON(url, callback) {
-  const response = await fetch(url);
-  const jsonData = await response.json();
-  callback(jsonData);
-}
+// export async function loadJSON(url, callback) {
+//   const response = await fetch(url);
+//   const jsonData = await response.json();
+//   callback(jsonData);
+// }
 
 //anonyme functioner
 //forEach loop gennem array
 
-students.forEach(function (student) {
-  console.log(`name: ${student.firstName}`);
-});
+// students.forEach(function (student) {
+//   console.log(`name: ${student.firstName}`);
+// });
+
+
+const student1 = {
+
+firstName: ”Harry”,
+
+lastName: ”Potter”
+
+};
+
+const student2 = student1;
+
+if (student1 === student2) {
+
+console.log(“They are the same!”);
+
+} else {
+
+console.log(“They are not ...”);
+
+}
