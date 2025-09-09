@@ -1,0 +1,47 @@
+.header {
+  padding: 50px;
+  text-align: center;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer {
+  text-align: center;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 50px;
+  background-color: var(--footer-bg-col);
+  color: var(--text-col);
+}
+
+p {
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-col);
+  padding: 1rem;
+  background-color: var(--footer-bg-col);
+}
+
+header {
+  background-color: var(--header-bg-col);
+  color: var(--text-col);
+  padding: 1rem;
+}
+
+:root {
+  --header-bg-col: lightblue;
+  --footer-bg-col: lightgray;
+  --text-col: black;
+}
+
+body[data-theme="hawaii"] {
+  --header-bg-col: orange;
+  --footer-bg-col: yellow;
+  --text-col: green;
+}
+
+body[data-theme="dark"] {
+  --header-bg-col: black;
+  --footer-bg-col: #222;
+  --text-col: white;
+}

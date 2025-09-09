@@ -1,0 +1,17 @@
+/* :root {
+  --header-bg-col: lightblue;
+  --footer-bg-col: lightgray;
+  --text-col: black;
+}
+
+body[data-theme="hawaii"] {
+  --header-bg-col: orange;
+  --footer-bg-col: yellow;
+  --text-col: green;
+}
+
+body[data-theme="dark"] {
+  --header-bg-col: black;
+  --footer-bg-col: #222;
+  --text-col: white;
+} */
