@@ -61,10 +61,6 @@ function selectSort(event) {
   const sortBy = event.target.dataset.sort;
   let sortDir = event.target.dataset.sortDirection;
 
-  // const oldElement = document.querySelector(`[data-action='${settings.sortBy}']`);
-  // oldElement.classList.remove("sortBy");
-  // event.target.classList.add("sortBy");
-
   if (sortDir === "asc") {
     event.target.dataset.sortDirection = "desc";
   } else {
@@ -72,13 +68,6 @@ function selectSort(event) {
   }
   sortList(sortBy, sortDir);
 }
-
-// function setSort(sortBy, sortDir) {
-//   settings.sortBy = sortBy;
-//   settings.sortDir = sortDir;
-
-//   buildList();
-// }
 
 function filterList(filterBy) {
   let filteredList = allAnimals;
