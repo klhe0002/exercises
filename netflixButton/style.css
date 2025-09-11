@@ -1,0 +1,59 @@
+.skjul {
+  display: none;
+}
+
+#button {
+  background-color: grey;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  left: 41%;
+  right: 50%;
+  padding-inline: 20px;
+}
+
+#overlay {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  color: black;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: absolute;
+  top: 1%;
+  height: 50px;
+  left: 0%;
+  width: 133px;
+  opacity: 50%;
+  padding-inline: 20px;
+}
+
+.timer {
+  animation-name: timer_kf;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes timer_kf {
+  0% {
+    clip-path: inset(0 100% 0 0); /* 0 fra top, 100% fra højre, 0 fra bund, 0 fra venstre */
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* alt synligt */
+  }
+}
+
+#slut {
+  align-items: center;
+  font-size: 50px;
+  color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
